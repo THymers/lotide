@@ -25,11 +25,11 @@ const assertArraysEqual = function (array1, array2) {
 };
 const middle = function (array) {
   if (array.length <= 2) {
-    console.log([]);
+    return [];
   } else if (array.length % 2 !== 0) {
-    console.log([array[Math.floor(array.length / 2)]]);
+    return [array[Math.floor(array.length / 2)]];
   } else {
-    console.log([array[array.length / 2 - 1], array[array.length / 2]]);
+    return [array[array.length / 2 - 1], array[array.length / 2]];
   }
 };
 
@@ -39,3 +39,6 @@ middle([1, 2, 3]); // => [2]
 middle([1, 2, 3, 4, 5]); // => [3]
 middle([1, 2, 3, 4]); // => [2, 3]
 middle([1, 2, 3, 4, 5, 6]); // => [3, 4]
+
+assertArraysEqual(middle([1, 2, 3]), [2]);
+assertArraysEqual(middle([1, 2]), []);

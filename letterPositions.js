@@ -40,4 +40,4 @@ const letterPositions = function (sentence) {
   return results;
 };
 assertArraysEqual(letterPositions("hello").e, [1]);
-assertArraysEqual(letterPositions("this is a test").e [1]);
+assertArraysEqual(letterPositions("this is a test").t, [0, 10, 13]);

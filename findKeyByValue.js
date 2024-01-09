@@ -14,7 +14,8 @@ const bestTVShowsByGenre = {
   late_night: "jimmy Kimmel"
 };
 const findKeyByValue = function(object, value) {
-  for (const key in object) {
+  const keys = Object.keys(object);
+  for (const key of keys) {
     if (object[key] === value) {
       return key;
     }

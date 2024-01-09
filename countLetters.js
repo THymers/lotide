@@ -22,4 +22,4 @@ const result1 = countLetters("this is the way to count letters");
 assertEqual(result1["t"], 4);
 assertEqual(result1["h"], 2);
 
-countLetters("this is the way to count letters");
+

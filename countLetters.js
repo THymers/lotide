@@ -5,19 +5,21 @@ const assertEqual = function (actual, expected) {
     console.log(`👎👎 Assertion Failed: [${actual}] !== [${expected}]`);
   }
 };
-const countLetters = function (allLetters, lettersToCount) {
+const countLetters = function (allLetters) {
   const results = {};
   for (const letter of allLetters) {
-    if (lettersToCount[letter]) {
-      if (results[letter]) {
-        results[letter] += 1;
-      } else {
-        results[letter] = 1;
-      }
+    if (!/[a-zA-Z]/.test(letter)) continue; // The semicolon from line 11 was removed
+    if (results[letter]) {
+      results[letter] += 1;
+    } else {
+      results[letter] = 1;
     }
   }
-  console.log(results);
+  return results;
 };
 
-const lettersToCount = { t: true, h: true, i: true, s: true };
-countLetters("this is the way to count letters", lettersToCount);
+const result1 = countLetters("this is the way to count letters");
+assertEqual(result1["t"], 4);
+assertEqual(result1["h"], 2);
+
+countLetters("this is the way to count letters");

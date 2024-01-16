@@ -15,7 +15,7 @@ const findKey = function (obj, callback) {
   }
   return undefined;
 };
-const result = findKey(
+const result1 = findKey(
   {
     "Best Friends": { stars: 1 },
     "Good Times": { stars: 3 },
@@ -26,8 +26,28 @@ const result = findKey(
   },
   (x) => x.stars === 2,
 );
-
+const result2 = findKey(
+  {
+    "Best Friends": { stars: 1 },
+    "Good Times": { stars: 3 },
+    best: { stars: 2 },
+    ouBletr: { stars: 3 },
+    wOw: { stars: 2 },
+    Awesome: { stars: 3 },
+  },
+  (x) => x.stars === 2,
+);const result3 = findKey(
+  {
+    "Best Friends": { stars: 1 },
+    "Good Times": { stars: 3 },
+    best: { stars: 2 },
+    ouBletr: { stars: 3 },
+    wOw: { stars: 2 },
+    Awesome: { stars: 3 },
+  },
+  (x) => x.stars === 2,
+);
 //tests
-assertEqual(result, "best");
-assertEqual(result, "wOw");
-assertEqual(result, "Best Friends");
+assertEqual(result1, "best");
+assertEqual(result2, "wOw");
+assertEqual(result3, "Best Friends");

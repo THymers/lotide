@@ -15,7 +15,7 @@ const findKey = function(obj, predicate) {
   }
   return undefined; 
 }
-findKey({
+const result = findKey({
   "Best Friends": { stars: 1 },
   "Good Times":   { stars: 3 },
   "best":      { stars: 2 },

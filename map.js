@@ -34,4 +34,16 @@ const map = function(array, callback) {
 }
 const results1 = map(words, word => word[0]);
 console.log(results1);
+//tests
+
+const resultUppercase = map(words, word => word.toUpperCase());
+assertArraysEqual(resultUppercase, ["GROUND", "CONTROL", "TO", "MAJOR", "TOM"]);
+
+
+const resultLength = map(words, word => word.length);
+assertArraysEqual(resultLength, [6, 7, 2, 5, 3]);
+
+
+
+
 

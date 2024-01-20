@@ -35,7 +35,7 @@ const result2 = findKey(
     wOw: { stars: 2 },
     Awesome: { stars: 3 },
   },
-  (x) => x.stars === 2,
+  (x) => x.stars === 3,
 );const result3 = findKey(
   {
     "Best Friends": { stars: 1 },
@@ -45,7 +45,7 @@ const result2 = findKey(
     wOw: { stars: 2 },
     Awesome: { stars: 3 },
   },
-  (x) => x.stars === 2,
+  (x) => x.stars === 1,
 );
 //tests
 assertEqual(result1, "best");

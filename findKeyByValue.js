@@ -20,7 +20,6 @@ const findKeyByValue = function(object, value) {
       return key;
     }
   }
-  return undefined;
 };
 
 assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");

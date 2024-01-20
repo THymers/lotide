@@ -22,4 +22,7 @@ const result1 = countLetters("this is the way to count letters");
 assertEqual(result1["t"], 4);
 assertEqual(result1["h"], 2);
 
-
+const result2 = countLetters("Lighthouse Labs");
+assertEqual(result2['L'], 2);
+assertEqual(result2['i'], 1);
+assertEqual(result2['g'], 1);

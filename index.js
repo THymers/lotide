@@ -12,7 +12,7 @@ const findKey = require('./findKey');
 const findKeyByValue = require('./findKeyByValue');
 const flatten = require('./flatten');
 const letterPositions = require('./letterPositions');
-const takeUntil = require('.takeUntil');
+const takeUntil = require('./takeUntil');
 const without = require('./without');
 
 

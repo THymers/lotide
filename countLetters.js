@@ -1,14 +1,9 @@
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`👍👍 Assertion Passed: [${actual}] === [${expected}]`);
-  } else {
-    console.log(`👎👎 Assertion Failed: [${actual}] !== [${expected}]`);
-  }
-};
+const assertEqual = require("./assertEqual");
+
 const countLetters = function (allLetters) {
   const results = {};
   for (const letter of allLetters) {
-    if (!/[a-zA-Z]/.test(letter)) continue; // The semicolon from line 11 was removed
+    if (!/[a-zA-Z]/.test(letter)) continue;
     if (results[letter]) {
       results[letter] += 1;
     } else {
@@ -17,14 +12,5 @@ const countLetters = function (allLetters) {
   }
   return results;
 };
-
-const result1 = countLetters("this is the way to count letters");
-assertEqual(result1["t"], 4);
-assertEqual(result1["h"], 2);
-
-const result2 = countLetters("Lighthouse Labs");
-assertEqual(result2["L"], 2);
-assertEqual(result2["i"], 1);
-assertEqual(result2["g"], 1);
 
 module.exports = countLetters;
